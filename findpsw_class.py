@@ -1,16 +1,10 @@
-import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow,QMessageBox
 from PyQt5.QtWidgets import QFileDialog
 from PyQt5.QtGui import QPixmap
-import sys
 from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtWidgets import QMainWindow, QTextEdit, QAction, QApplication
-import os,sys
-from PIL import Image
-import cv2
-import PIL
-import numpy
-import Qrcode
+import os
+
 from login_GUI import Login_MainWindow
 from Qrcode_excel_GUI import Qrcode_excel_MainWindow
 from findpsw_GUI import findpsw_MainWindow
@@ -51,7 +45,7 @@ class findpsw_MainWindow(QtWidgets.QMainWindow,findpsw_MainWindow):
                         if(result[0][0]==phonenum):
                             cur.execute("update user set passwd='%s' where id='%s'" % (newpasswd,name))
                             db.commit()
-                            reply=QMessageBox.question(self,'系统提示','密码已更新！',QMessageBox.Ok)
+                            reply=QMessageBox.question(self,'系统提示','密码已更新',QMessageBox.Ok)
                             #YES的返回值为0x40000
                             if(reply==0x4000):
                                 #加个self
@@ -59,7 +53,7 @@ class findpsw_MainWindow(QtWidgets.QMainWindow,findpsw_MainWindow):
                                 self.sign.show()
                                 self.close() 
                         else:
-                            reply=QMessageBox.question(self,'系统提示','与输入预留手机号不匹配！',QMessageBox.Ok)
+                            reply=QMessageBox.question(self,'系统提示','与输入预留手机号不匹配',QMessageBox.Ok)
                             #YES的返回值为0x40000
                             if(reply==0x4000):
                                 #加个self
@@ -77,7 +71,7 @@ class findpsw_MainWindow(QtWidgets.QMainWindow,findpsw_MainWindow):
                         self.close() 
         else:
             #print("请输入用户名！")
-            reply=QMessageBox.question(self,'系统提示','三项均不能为空！',QMessageBox.Ok)
+            reply=QMessageBox.question(self,'系统提示','三项均不能为空',QMessageBox.Ok)
             #YES的返回值为0x40000
             if(reply==0x4000):
                 #加个self

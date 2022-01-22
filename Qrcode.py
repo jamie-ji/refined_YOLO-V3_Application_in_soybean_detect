@@ -1,5 +1,4 @@
 import qrcode
-import zxing
 import qrcode
 from pyzbar import pyzbar
 from PIL import Image

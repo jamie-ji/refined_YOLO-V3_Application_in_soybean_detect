@@ -7,28 +7,19 @@
 #                                                                              
 ############################################################
 
-
-
 from tkinter.constants import TRUE
 from typing import Optional
 import pyzbar.pyzbar as pyzbar
-import numpy
 from PIL import Image, ImageDraw, ImageFont
-import cv2
 from weathe_data import getcitycode, getweather
-import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow,QMessageBox
 from PyQt5.QtWidgets import QFileDialog
 from PyQt5.QtGui import QPixmap
-import sys
 from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtWidgets import QMainWindow, QTextEdit, QAction, QApplication
-import os,sys
+import os
 from PIL import Image
 import cv2
-import PIL
-import numpy
-import Qrcode
 from login_GUI import Login_MainWindow
 from newindex_GUI import newindex_MainWindow
 import xlrd     #excel读库
@@ -46,14 +37,10 @@ from PyQt5.QtCore import *
 import xlrd     #excel读库
 import xlwt     #excel写库
 from xlutils.copy import copy
-from PIL import Image
 import imutils
-import numpy as np
-
-import tkinter
-
-
 from borax.calendars.lunardate import LunarDate
+
+
 class newindex_MainWindow(QtWidgets.QMainWindow,newindex_MainWindow):
 
 
@@ -104,7 +91,7 @@ class newindex_MainWindow(QtWidgets.QMainWindow,newindex_MainWindow):
         #print(citycode)
         r=requests.get("http://www.weather.com.cn/data/sk/"+str(citycode)+".html")
         r.encoding='utf-8'
-        self.outtextBroswer("城市:"+str(r.json()['weatherinfo']['city'])+" 平均温度为："+str(r.json()['weatherinfo']['temp'])+"℃"+" 风况为："+str(r.json()['weatherinfo']['WD']))
+        self.outtextBroswer("城市:"+str(r.json()['weatherinfo']['city'])+" 平均温度为:"+str(r.json()['weatherinfo']['temp'])+"℃"+" 风况为："+str(r.json()['weatherinfo']['WD']))
         
         localtime=time.localtime(time.time())
         lunar=LunarDate.today()

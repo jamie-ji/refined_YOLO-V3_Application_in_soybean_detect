@@ -3,10 +3,9 @@ from PyQt5.QtWidgets import QFileDialog
 from PyQt5.QtGui import QPixmap
 from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtWidgets import QMainWindow, QTextEdit, QAction, QApplication
-import os,sys
+import os
 from PIL import Image
 import Qrcode
-
 from login_GUI import Login_MainWindow
 from Qrcode_excel_GUI import Qrcode_excel_MainWindow
 import xlrd     #excel读库
