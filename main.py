@@ -1,16 +1,11 @@
-import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow,QMessageBox
 from PyQt5.QtWidgets import QFileDialog
 from PyQt5.QtGui import QPixmap
 import sys
 from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtWidgets import QMainWindow, QTextEdit, QAction, QApplication
-import os,sys
-from PIL import Image
-import cv2
-import PIL
-import numpy
-import Qrcode
+
+
 
 from login_GUI import Login_MainWindow
 from newindex_class import newindex_MainWindow
@@ -30,7 +25,7 @@ class Login_MainWindow(QtWidgets.QMainWindow,Login_MainWindow):
         passwd=self.lineEdit.text()
         flag=False
         if account=="" or passwd == "":
-            reply=QMessageBox.warning(self,"警告","帐号密码不能为空")
+            reply=QMessageBox.warning(self,"警告","帐号密码不能为空!!")
             return 
         else: 
             sql="select id from user"

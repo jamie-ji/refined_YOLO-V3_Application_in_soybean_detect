@@ -1,16 +1,9 @@
-import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow,QMessageBox
 from PyQt5.QtWidgets import QFileDialog
 from PyQt5.QtGui import QPixmap
-import sys
 from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtWidgets import QMainWindow, QTextEdit, QAction, QApplication
-import os,sys
-from PIL import Image
-import cv2
-import PIL
-import numpy
-import Qrcode
+import os
 from login_GUI import Login_MainWindow
 from Qrcode_excel_GUI import Qrcode_excel_MainWindow
 from signin_GUI import signin_MainWindow
@@ -42,7 +35,7 @@ class signin_MainWindow(QtWidgets.QMainWindow,signin_MainWindow):
                     if(name==result[i][0]):
                         flag=True
                         #print("发现重复，请更换id")
-                        reply=QMessageBox.question(self,'系统提示','发现重复，请输入新的id！',QMessageBox.Ok)
+                        reply=QMessageBox.question(self,'系统提示','发现重复，请输入新的id',QMessageBox.Ok)
                         #YES的返回值为0x40000
                         if(reply==0x4000):
                             #加个self
@@ -56,7 +49,7 @@ class signin_MainWindow(QtWidgets.QMainWindow,signin_MainWindow):
                     #print("插入数据")
         else:
             #print("请输入用户名！")
-            reply=QMessageBox.question(self,'系统提示','id不能为空！',QMessageBox.Ok)
+            reply=QMessageBox.question(self,'系统提示','id不能为空',QMessageBox.Ok)
             #YES的返回值为0x40000
             if(reply==0x4000):
                 #加个self

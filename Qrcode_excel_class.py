@@ -1,24 +1,21 @@
-import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow,QMessageBox
 from PyQt5.QtWidgets import QFileDialog
 from PyQt5.QtGui import QPixmap
-import sys
 from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtWidgets import QMainWindow, QTextEdit, QAction, QApplication
 import os,sys
 from PIL import Image
-import cv2
-import PIL
-import numpy
 import Qrcode
+
 from login_GUI import Login_MainWindow
 from Qrcode_excel_GUI import Qrcode_excel_MainWindow
 import xlrd     #excel读库
-import xlwt     #excel写库
 from newindex_class import newindex_MainWindow
 import pymysql
 import time
 import globalvar as gl
+
+
 class Qrcode_excel_MainWindow(QtWidgets.QMainWindow,Qrcode_excel_MainWindow):
     
     def __init__(self):
@@ -42,6 +39,7 @@ class Qrcode_excel_MainWindow(QtWidgets.QMainWindow,Qrcode_excel_MainWindow):
         
     #开始生成
     def begin(self):
+        
         data=xlrd.open_workbook(self.excel_path[0])      #打开文件
         table=data.sheets()[0]      #读取第一张表
         nrows=table.nrows       #行数
