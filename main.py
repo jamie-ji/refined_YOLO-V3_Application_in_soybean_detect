@@ -12,7 +12,7 @@ from newindex_class import newindex_MainWindow
 from signin_class import signin_MainWindow
 import pymysql
 
-#登录界面
+#登录界
 class Login_MainWindow(QtWidgets.QMainWindow,Login_MainWindow):
     def __init__(self):
         super(Login_MainWindow,self).__init__()
