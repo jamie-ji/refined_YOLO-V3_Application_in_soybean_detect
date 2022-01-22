@@ -52,7 +52,7 @@ class Login_MainWindow(QtWidgets.QMainWindow,Login_MainWindow):
                             self.index.show()
                             self.close()
                         else:
-                            reply=QMessageBox.question(self,'系统提示','密码错误！',QMessageBox.Ok)
+                            reply=QMessageBox.question(self,'系统提示','密码错误',QMessageBox.Ok)
                             #YES的返回值为0x40000
                             if(reply==0x4000):
                                 #加个self
