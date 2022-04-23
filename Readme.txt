@@ -1,7 +1,11 @@
 
 
 
-使用说明
+使用说明：
+完整的讲解说明材料，请前往百度云下载：
+    链接：https://pan.baidu.com/s/1a9-1YMAydKZC3bzwaaUTRg 
+    提取码：ro9x
+
 
 
 
